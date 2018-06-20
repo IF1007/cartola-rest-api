@@ -39,7 +39,7 @@ func (handler *PlayerRequestHandler) InsertPlayers(w http.ResponseWriter, r *htt
 	if err != nil {
 		panic(err)
 	}
-
+	
 	// parse to JSON
 	var res []model.Player
 	err = json.Unmarshal(body, &res)

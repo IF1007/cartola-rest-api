@@ -12,9 +12,9 @@ const (
 )
 
 // AllPlayers retrieves the players from the database.
-func (db *DB) AllPlayers() (*[]model.Player, error) {
-	var players []model.Player
-	var player model.Player
+func (db *DB) AllPlayers() (*[]model.PlayerIngres, error) {
+	var players []model.PlayerIngres
+	var player model.PlayerIngres
 	ctx := context.Background()
 
 	c, err := db.Collection(playersCollection).Find(ctx, nil)
@@ -26,7 +26,7 @@ func (db *DB) AllPlayers() (*[]model.Player, error) {
 			return nil, err
 		}
 	}
-
+	
 	return &players, err
 }
 
