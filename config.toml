@@ -1,0 +1,2 @@
+server="mongodb://mongo:27017"
+database="cartola"
